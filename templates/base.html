@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href={{url_for('static', filename='style.css' )}}>
+    <title>Boggle</title>
+</head>
+
+<body>
+    <div class="endgame">
+        <h1>Thanks for playing!</h1>
+        <p id="endMessage"></p>
+    </div>
+    <div class="timer_score_container">
+        <div id="timer">Timer: </div>
+        <div id="score">Score: </div>
+    </div>
+
+    <div class="container">
+
+        <div class="game_board_cont">
+            {% for row in board %}
+            <div class="game_board_row">
+                {% for space in row %}
+                <div class="game_board_space">{{space}}</div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <div>
+            <form name="guess" method="POST">
+
+                <P>Type your guess:<input type="text" required></P>
+                <button type="submit" id="subButton">Enter</button>
+            </form>
+        </div>
+
+        <p id="outcome"> </p>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+
+</html>

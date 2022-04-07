@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.game_board_cont {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.game_board_row {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.game_board_space {
+    display: flex;
+    border: 1px solid black;
+    width: 75px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-around;
+}
+
+input {
+    margin-left: 10px;
+}
+
+#score {
+    padding: 10px;
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+#timer {
+    padding: 10px;
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+.timer_score_container {
+
+    /* border: 1px solid black; */
+    width: 250px;
+    height: 150px;
+}
+
+.endgame {
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#endMessage {
+    font-size: 1.5rem;
+}
